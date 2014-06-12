@@ -1,0 +1,129 @@
+% 
+% NTHU Template
+% 2014 Yao Wei
+%
+% This file is licensed under CC0.
+% https://creativecommons.org/publicdomain/zero/1.0/
+%
+
+\documentclass[12pt]{article}
+
+% Lint
+\RequirePackage[l2tabu, orthodox]{nag}
+
+% Fonts
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage{CJKutf8}
+
+% Layout
+\usepackage[a4paper, top=2.54cm, bottom=2.54cm, left=3.17cm, right=2.54cm]{geometry}
+\usepackage{abstract}
+
+% Paragraph
+\usepackage{indentfirst}
+\usepackage{setspace}
+
+% Watermarks
+\usepackage{wallpaper}
+\CenterWallPaper{.25}{./assets/nthu_watermark.eps}
+
+% Citations
+\usepackage[backend=bibtex,sorting=none]{biblatex}
+\bibliography{thesis}
+\renewbibmacro{in:}{}
+
+% Figures
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{rotating}
+
+\begin{document}
+\begin{CJK}{UTF8}{bkai}
+
+\begin{titlepage}
+\begin{center}
+\Large 國立清華大學資訊工程學研究所 \\
+\Large 碩士論文 \\
+%\Large （初稿）\\
+\vspace*{10ex}
+\huge 這是個假的中文標題 \\
+\vspace*{1ex}
+\huge Lorem Ipsum Dolor Sit Amet \\
+
+\null
+\vfill
+
+\Large
+\begin{tabular}{r@{} @{}l}
+    學號：~&123456789          \\
+    姓名：~&王小明             \\
+           &John Doe           \\
+指導教授：~&某某某~教授        \\
+           &Prof. Someone Else \\
+\end{tabular}
+
+\vspace*{2ex}
+\Large 中華民國 100 年 0 月
+\end{center}
+\end{titlepage}
+
+\doublespacing
+\pagenumbering{roman}
+\setcounter{page}{3}
+\addcontentsline{toc}{section}{Abstract}
+
+\renewcommand{\abstractnamefont}{\normalfont\bfseries}
+\renewcommand{\abstracttextfont}{\normalfont}
+\setlength{\absleftindent}{0pt}
+\setlength{\absrightindent}{0pt}
+
+\begin{abstract}  % Abstract
+	Abstract Page
+\end{abstract}
+\clearpage
+\addcontentsline{toc}{section}{Acknowledgements}
+
+\begin{center}
+\textbf{Acknowledgements}
+\end{center}
+Acknowledgements Page
+\clearpage
+
+\singlespacing
+
+\tableofcontents  % Table of contents
+\clearpage
+\addcontentsline{toc}{section}{List of Figures}
+\listoffigures  % List of figures
+\clearpage
+\addcontentsline{toc}{section}{List of Tables}
+\listoftables  % List of tables
+\clearpage
+
+\doublespacing
+%\setlength{\parskip}{12pt}
+
+\pagenumbering{arabic}
+
+\section{Introduction}
+
+
+\section{Related Work}
+
+\section{Design and Implementation}
+
+\section{Performance Evaluation}
+
+\section{Conclusions}
+
+\clearpage
+
+\addcontentsline{toc}{section}{References}
+\singlespacing
+%\setlength{\parskip}{0pt}
+
+\printbibliography
+
+\end{CJK}
+\end{document}
